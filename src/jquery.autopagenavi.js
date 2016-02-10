@@ -1,6 +1,7 @@
 /**
  * jquery.autopagenavi.js v0.0.1
  * Show a page navigation through loading json file which urls are written.
+ * https://github.com/tomothumb/jquery.autopagenavi
  *
  * This Library depend on Handlbars.js
  * http://handlebarsjs.com/
@@ -12,8 +13,6 @@
  */
 
 "use strict";
-
-;
 
 /**
  * TODO : This library should be change working without jQuery!!!
