@@ -108,11 +108,17 @@ var JqueryAutopagenavi;
          * 出力用にリストをパース
          */
         self.parse = function(){
-            // TODO : Add process of first/last page
-            //console.log(self.current_dataset);
-            self.outputitems.prev = self.data[self.current_dataset.num - 1];
             self.outputitems.current = self.data[self.current_dataset.num];
-            self.outputitems.next = self.data[self.current_dataset.num + 1];
+            if(self.current_dataset.num <= 0){
+                self.outputitems.prev = self.data[self.data.length-1];
+            }else{
+                self.outputitems.prev = self.data[self.current_dataset.num - 1];
+            }
+            if(self.current_dataset.num >= self.data.length-1){
+                self.outputitems.next = self.data[0];
+            }else{
+                self.outputitems.next = self.data[self.current_dataset.num + 1];
+            }
         };
 
         /**
